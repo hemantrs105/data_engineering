@@ -88,12 +88,12 @@ def process_crop_stats(cropmap_path, input_raster_path, shapefile_path, threshol
 
         if save_intermediate:
             # Save the Crop Fraction Raster
-            frac_path = os.path.join(output_dir, "intermediate_crop_fraction.tif")
+            frac_path = os.path.join(output_dir, "intermediate_crop_fraction3.tif")
             with rasterio.open(frac_path, 'w', **lr_meta) as dst:
                 dst.write(crop_fraction, 1)
             
             # Save the Final Masked Raster (keep the temp file as permanent)
-            masked_path = os.path.join(output_dir, "intermediate_masked_input.tif")
+            masked_path = os.path.join(output_dir, "intermediate_masked_input3.tif")
             # We can just copy or write again. Writing is safer to ensure closure.
             with rasterio.open(masked_path, 'w', **lr_meta) as dst:
                 dst.write(masked_raster, 1)
@@ -138,8 +138,8 @@ def process_crop_stats(cropmap_path, input_raster_path, shapefile_path, threshol
 # Example Usage: process_crop_stats(cropmap_path, input_raster_path, shapefile_path, threshold, output_csv):
 process_crop_stats(
     cropmap_path = r"C:\Z DRIVE\Assam_kharif_2025\final_cropmap_2025\Assam_salipaddy2025_final_cropmap.tif", 
-    input_raster_path = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\season_max_LAI.tif", 
+    input_raster_path = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\16022026\s3LAI_convertedYield.tif",
     shapefile_path = r"C:\Z DRIVE\Assam_kharif_2025\shapefile\kharif2025_final_shp_24102025_with_Notification.shp",
     threshold = 0.6,
-    output_csv = r'C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\zonal_stats.csv',
+    output_csv = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\16022026\zonal_stats_yield_s3LAI_convertedYield.csv",
     save_intermediate = True)
