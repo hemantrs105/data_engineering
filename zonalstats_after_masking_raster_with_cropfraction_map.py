@@ -138,8 +138,8 @@ def process_crop_stats(cropmap_path, input_raster_path, shapefile_path, threshol
 # Example Usage: process_crop_stats(cropmap_path, input_raster_path, shapefile_path, threshold, output_csv):
 process_crop_stats(
     cropmap_path = r"C:\Z DRIVE\Assam_kharif_2025\final_cropmap_2025\Assam_salipaddy2025_final_cropmap.tif", 
-    input_raster_path = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\16022026\s3LAI_convertedYield.tif",
+    input_raster_path = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\historic_LAI\LAIX_S3_2022.tif",
     shapefile_path = r"C:\Z DRIVE\Assam_kharif_2025\shapefile\kharif2025_final_shp_24102025_with_Notification.shp",
-    threshold = 0.6,
-    output_csv = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\16022026\zonal_stats_yield_s3LAI_convertedYield.csv",
+    threshold = 0.8,
+    output_csv = r"C:\Z DRIVE\Assam_kharif_2025\semiphysical\datasets\LAI\2025\processed_rasters\LAIX_S3_2022.csv",
     save_intermediate = True)
