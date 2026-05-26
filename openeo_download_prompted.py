@@ -15,7 +15,7 @@ def interactive_downloader():
     
     # 1. Connect and Authenticate
     print("Connecting to Copernicus Data Space Ecosystem...")
-    connection = openeo.connect("openeofed.dataspace.copernicus.eu")
+    connection = openeo.connect("openeo.cloud")
     connection.authenticate_oidc()
     print("Authenticated successfully.\n")
 
